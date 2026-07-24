@@ -682,9 +682,10 @@ select option{background:var(--violet-deep)}
       <div class="form-group"><label>How did you find me?</label>
         <select id="inp-source"><option value="">Select…</option><option>Instagram</option><option>TikTok</option><option>Word of mouth</option><option>Google</option><option>Returning client</option><option>Other</option></select>
       </div>
+      <div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" id="inp-website" tabindex="-1" autocomplete="off"></div>
       <div class="booking-nav">
         <button class="btn-back" onclick="prevStep(4)">← Back</button>
-        <button class="btn-primary" onclick="submitBooking()">Review &amp; Confirm →</button>
+        <button class="btn-primary" id="btn-submit-booking" onclick="submitBooking()">Review &amp; Confirm →</button>
       </div>
     </div>
 
@@ -1224,12 +1225,42 @@ function selectTime(t,el){
   btn.style.opacity='1'; btn.style.pointerEvents='auto';
 }
 
-function submitBooking(){
+async function submitBooking(){
   const fname=document.getElementById('inp-fname').value.trim();
   const lname=document.getElementById('inp-lname').value.trim();
   const email=document.getElementById('inp-email').value.trim();
   if(!fname||!email){ alert('Please enter your name and email.'); return; }
-  booking.name=fname+' '+lname; booking.email=email;
+  booking.name=(fname+' '+lname).trim(); booking.email=email;
+  booking.intention=document.getElementById('inp-intention').value.trim();
+  booking.source=document.getElementById('inp-source').value;
+
+  const btn=document.getElementById('btn-submit-booking');
+  const prevLabel=btn.textContent;
+  btn.textContent='Sending…'; btn.style.pointerEvents='none'; btn.style.opacity='0.6';
+  try{
+    const r=await fetch('/api/book',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        service:booking.serviceLabel,
+        dateLabel:booking.dateLabel,
+        time:booking.time,
+        price:booking.price,
+        name:booking.name,
+        email:booking.email,
+        intention:booking.intention,
+        source:booking.source,
+        website:document.getElementById('inp-website').value
+      })
+    });
+    const data=await r.json().catch(()=>({}));
+    if(!r.ok){ throw new Error(data.error||'Something went wrong.'); }
+  }catch(err){
+    btn.textContent=prevLabel; btn.style.pointerEvents='auto'; btn.style.opacity='1';
+    alert('Sorry, your booking could not be sent: '+err.message+'\nPlease try again in a moment.');
+    return;
+  }
+  btn.textContent=prevLabel; btn.style.pointerEvents='auto'; btn.style.opacity='1';
   document.getElementById('step4').classList.remove('active');
   document.getElementById('step5').classList.add('active');
   updateProgress(5);
