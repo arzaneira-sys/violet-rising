@@ -52,7 +52,7 @@ function clientEmailHtml(b) {
         ${esc(b.dateLabel)} at ${esc(b.time)} (UK time)<br>
         ${esc(b.price)}
       </p>
-      <p>Violet will confirm your session and send payment details to this email address shortly. Your slot is secured once payment is complete.</p>
+      <p>Neira will confirm your session and send payment details to this email address shortly. Your slot is secured once payment is complete.</p>
       <p>Until then — prepare a quiet, private space, and come with an open heart.</p>
       <p style="color:#7b4fa0">✦ Violet Rising · Tarot · Manifestation · Transformation</p>
     </div>
@@ -125,9 +125,10 @@ module.exports = async (req, res) => {
   const client = await sendEmail(apiKey, {
     from,
     to: [booking.email],
+    reply_to: toOwner,
     subject: `✦ Violet Rising — booking request received: ${booking.service}`,
     html: clientEmailHtml(booking),
-    text: `Dear ${booking.name},\n\nThank you for booking with Violet Rising.\n\n${booking.service}\n${booking.dateLabel} at ${booking.time} (UK time)\n${booking.price}\n\nViolet will confirm your session and send payment details to this email shortly.\n\n✦ Violet Rising`,
+    text: `Dear ${booking.name},\n\nThank you for booking with Violet Rising.\n\n${booking.service}\n${booking.dateLabel} at ${booking.time} (UK time)\n${booking.price}\n\nNeira will confirm your session and send payment details to this email shortly.\n\n✦ Violet Rising`,
   });
   if (!client.ok) {
     console.warn('Client confirmation not sent:', client.status, JSON.stringify(client.body));

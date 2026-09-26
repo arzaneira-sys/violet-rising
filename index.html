@@ -3,7 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Violet Rising | Tarot · Manifestation · Transformation</title>
+<title>Violet Rising | Tarot Readings &amp; Manifestation Coaching · Glasgow &amp; Online</title>
+<meta name="description" content="Tarot readings by Neira and manifestation coaching. 15, 30 and 60 minute readings, group readings, parties, house calls and events. Lumiere Salon, Glasgow, or online.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Violet Rising">
+<meta property="og:title" content="Violet Rising | Tarot Readings &amp; Manifestation Coaching">
+<meta property="og:description" content="Tarot readings by Neira · Manifestation coaching · Lumiere Salon, Glasgow, or online.">
+<meta property="og:image" content="https://violet-rising.vercel.app/assets/og-banner.jpg">
+<meta property="og:url" content="https://violet-rising.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -25,6 +36,7 @@ body{font-family:'Raleway',sans-serif;background:var(--violet-deep);color:var(--
 /* ── NAV ── */
 nav{position:fixed;top:0;width:100%;z-index:100;padding:1.2rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(26,10,46,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.15);transition:background 0.3s}
 .nav-logo{font-family:'Cinzel',serif;font-size:1.1rem;letter-spacing:0.2em;color:var(--gold);text-decoration:none;cursor:pointer;display:flex;align-items:center;gap:0.5rem}
+.nav-logo-img{height:38px;width:auto;filter:drop-shadow(0 0 6px rgba(192,132,252,0.7));animation:navGlow 3s ease-in-out infinite alternate;flex-shrink:0}
 .nav-logo-svg{width:30px;height:30px;filter:drop-shadow(0 0 6px rgba(192,132,252,0.7));animation:navGlow 3s ease-in-out infinite alternate;flex-shrink:0}
 @keyframes navGlow{0%{filter:drop-shadow(0 0 4px rgba(192,132,252,0.4))}100%{filter:drop-shadow(0 0 10px rgba(192,132,252,0.9)) drop-shadow(0 0 16px rgba(201,168,76,0.3))}}
 .nav-links{display:flex;gap:2.5rem;list-style:none}
@@ -45,6 +57,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;padding:1.2rem 3rem;display:flex
 /* VR Brand in hero */
 .vr-hero-brand{display:flex;flex-direction:column;align-items:center;gap:0;position:relative;z-index:2}
 .vr-logo-wrap{position:relative;display:flex;justify-content:center;align-items:center;width:200px;height:200px;margin:0 auto 0.4rem}
+.vr-logo-img{height:172px;width:auto;position:relative;z-index:2;animation:subtleGlow 5s ease-in-out infinite alternate}
 .vr-logo-svg{width:160px;height:160px;position:relative;z-index:2;animation:subtleGlow 5s ease-in-out infinite alternate}
 @keyframes subtleGlow{0%{filter:drop-shadow(0 0 12px rgba(147,51,234,0.55)) drop-shadow(0 0 28px rgba(124,58,237,0.2))}100%{filter:drop-shadow(0 0 24px rgba(192,132,252,0.8)) drop-shadow(0 0 50px rgba(147,51,234,0.4))}}
 .vr-ember-canvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none}
@@ -115,6 +128,7 @@ section{padding:6rem 2rem}
 
 /* ── FOOTER ── */
 footer{padding:3rem 2rem;border-top:1px solid rgba(201,168,76,0.1);text-align:center;position:relative}
+.footer-logo-img{height:84px;width:auto;display:block;margin:0 auto 0.6rem;animation:subtleGlow 5s ease-in-out infinite alternate}
 .footer-logo-svg{width:70px;height:70px;display:block;margin:0 auto 0.6rem;animation:subtleGlow 5s ease-in-out infinite alternate}
 .footer-brand-name{font-family:'Cinzel Decorative','Cinzel',serif;font-size:1.3rem;letter-spacing:0.1em;background:linear-gradient(135deg,#e0c8ff,#a855f7,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:0.3rem}
 .footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--text-muted);font-size:0.95rem;margin-bottom:2rem}
@@ -237,6 +251,19 @@ select option{background:var(--violet-deep)}
 .admin-pw-hint strong{color:var(--gold)}
 .admin-grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 
+/* ── OFFER ── */
+.offer-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:3.5rem;align-items:center;max-width:1000px;margin:0 auto}
+.offer-img{width:100%;max-width:400px;display:block;margin:0 auto;border:1px solid rgba(192,132,252,0.25);box-shadow:0 20px 60px rgba(0,0,0,0.45),0 0 40px rgba(147,51,234,0.25)}
+.offer-badge{display:inline-block;font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--violet-deep);background:var(--gold-light);padding:0.4rem 0.9rem;margin-bottom:1.2rem}
+.offer-headline{font-family:'Cormorant Garamond',serif;font-size:2.7rem;font-weight:300;line-height:1.15;color:var(--text-light);margin-bottom:1rem}
+.offer-note{font-size:0.92rem;line-height:1.85;color:var(--text-muted);margin-bottom:1.6rem}
+.offer-list{list-style:none;display:flex;flex-wrap:wrap;gap:0.6rem 1.5rem;margin:0 0 2rem}
+.offer-list li{font-size:0.85rem;letter-spacing:0.06em;color:var(--violet-pale)}
+.offer-list li::before{content:'✦ ';color:var(--gold);font-size:0.65rem}
+.footer-contact{font-size:0.85rem;color:var(--text-muted);margin:-1.2rem 0 1.8rem;line-height:1.9}
+.footer-contact a{color:var(--violet-soft);text-decoration:none;letter-spacing:0.03em}
+.footer-contact a:hover{color:var(--gold)}
+
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
   nav{padding:1rem 1.5rem}
@@ -247,6 +274,9 @@ select option{background:var(--violet-deep)}
   .stats-row{grid-template-columns:repeat(2,1fr)}
   .form-row{grid-template-columns:1fr}
   .admin-grid2{grid-template-columns:1fr}
+  .offer-grid{grid-template-columns:1fr;gap:2.5rem;text-align:center}
+  .offer-list{justify-content:center}
+  .offer-headline{font-size:2.1rem}
 }
 @media(max-width:480px){
   .nav-links{display:none}
@@ -259,12 +289,7 @@ select option{background:var(--violet-deep)}
 <!-- ── NAV ── -->
 <nav id="navbar">
   <a class="nav-logo" onclick="showPage('home')">
-    <svg class="nav-logo-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="40" cy="40" r="38" stroke="rgba(192,132,252,0.5)" stroke-width="1"/>
-      <circle cx="40" cy="40" r="30" stroke="rgba(201,168,76,0.25)" stroke-width="0.5"/>
-      <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Cinzel Decorative, serif" font-size="22" fill="url(#ng)" letter-spacing="1">VR</text>
-      <defs><linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c8ff"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#c084fc"/></linearGradient></defs>
-    </svg>
+    <img class="nav-logo-img" src="/assets/logo-nav.png" alt="">
     VIOLET RISING
   </a>
   <ul class="nav-links">
@@ -282,36 +307,13 @@ select option{background:var(--violet-deep)}
     <div class="stars"></div>
     <div class="vr-hero-brand">
       <div class="vr-logo-wrap">
-        <svg class="vr-logo-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="100" r="96" stroke="rgba(192,132,252,0.35)" stroke-width="1.5"/>
-          <circle cx="100" cy="100" r="80" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
-          <circle cx="100" cy="100" r="60" stroke="rgba(192,132,252,0.15)" stroke-width="0.5"/>
-          <!-- Flame-like shape -->
-          <path d="M100 30 C80 60 60 75 65 105 C68 120 80 135 100 145 C120 135 132 120 135 105 C140 75 120 60 100 30Z" fill="url(#flame)" opacity="0.7"/>
-          <path d="M100 55 C88 72 78 82 80 98 C82 110 90 120 100 126 C110 120 118 110 120 98 C122 82 112 72 100 55Z" fill="url(#flame2)" opacity="0.9"/>
-          <text x="50%" y="75%" dominant-baseline="middle" text-anchor="middle" font-family="Cinzel Decorative, serif" font-size="34" fill="url(#logoGrad)" letter-spacing="2">VR</text>
-          <defs>
-            <linearGradient id="flame" x1="100" y1="30" x2="100" y2="145" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8"/>
-              <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.3"/>
-            </linearGradient>
-            <linearGradient id="flame2" x1="100" y1="55" x2="100" y2="126" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#c084fc" stop-opacity="0.9"/>
-              <stop offset="100%" stop-color="#a855f7" stop-opacity="0.5"/>
-            </linearGradient>
-            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#e0c8ff"/>
-              <stop offset="50%" stop-color="#c9a84c"/>
-              <stop offset="100%" stop-color="#c084fc"/>
-            </linearGradient>
-          </defs>
-        </svg>
+        <img class="vr-logo-img" src="/assets/logo.png" alt="Violet Rising">
         <canvas id="vrEmberCanvas" class="vr-ember-canvas"></canvas>
       </div>
       <h1 class="vr-brand-name" id="txt-hero-name">Violet Rising</h1>
       <p class="vr-brand-subtitle" id="txt-hero-subtitle">Tarot Readings <span>~</span> Manifestation Coaching</p>
     </div>
-    <p class="hero-desc" id="txt-hero-desc">Thousands of readings. Five years of practice. One invitation — to rise into the life you were always meant to live.</p>
+    <p class="hero-desc" id="txt-hero-desc">Tarot readings by Neira. Over a thousand readings, five years of practice, one invitation — to rise into the life you were always meant to live.</p>
     <div class="hero-ctas">
       <button class="btn-primary" onclick="showPage('booking')" id="txt-hero-cta1">Book a Reading</button>
       <button class="btn-outline" onclick="showPage('about')" id="txt-hero-cta2">Meet Your Guide</button>
@@ -328,7 +330,7 @@ select option{background:var(--violet-deep)}
       <p class="section-intro" id="txt-s-intro">Every reading is a conversation between you, the cards, and the deeper intelligence that already knows the way.</p>
       <div class="cards-grid reveal">
         <div class="service-card">
-          <div class="card-duration" id="txt-c1-dur">10 Minutes</div>
+          <div class="card-duration" id="txt-c1-dur">15 Minutes</div>
           <div class="card-name" id="txt-c1-name">Quick Clarity Reading</div>
           <div class="card-price" id="txt-c1-price">£25</div>
           <div class="card-desc" id="txt-c1-desc">A focused one-question reading for swift insight when you need a clear signal, fast.</div>
@@ -344,7 +346,7 @@ select option{background:var(--violet-deep)}
         <div class="service-card">
           <div class="card-duration" id="txt-c3-dur">60 Minutes</div>
           <div class="card-name" id="txt-c3-name">Full Immersion Reading</div>
-          <div class="card-price" id="txt-c3-price">£90</div>
+          <div class="card-price" id="txt-c3-price">£80</div>
           <div class="card-desc" id="txt-c3-desc">A comprehensive session covering multiple areas of your life — clarity and transformation in one sitting.</div>
           <a class="card-cta" onclick="showPage('booking')">Book Now →</a>
         </div>
@@ -390,6 +392,32 @@ select option{background:var(--violet-deep)}
 
   <div class="divider"><span>✦</span></div>
 
+  <!-- THIS MONTH'S OFFER -->
+  <section id="offer-section">
+    <div class="section-inner">
+      <div class="offer-grid reveal">
+        <div>
+          <img class="offer-img" src="/assets/september-offer.jpg" alt="Violet Rising monthly offer flyer" loading="lazy">
+        </div>
+        <div>
+          <span class="offer-badge" id="txt-offer-badge">September Deal</span>
+          <h2 class="offer-headline" id="txt-offer-title">Bring a friend for 20% off</h2>
+          <p class="offer-note" id="txt-offer-body">Applicable on all readings — bring your loved ones and you all save 20% with any booking. Free 10-minute tasters are also available for manifestation classes.</p>
+          <p class="section-label" id="txt-offer-group-label">Exciting group offers</p>
+          <ul class="offer-list">
+            <li id="txt-offer-g1">Group readings</li>
+            <li id="txt-offer-g2">Parties</li>
+            <li id="txt-offer-g3">House calls</li>
+            <li id="txt-offer-g4">Events</li>
+          </ul>
+          <button class="btn-primary" onclick="showPage('booking')">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"><span>✦</span></div>
+
   <!-- ABOUT TEASER -->
   <section>
     <div class="section-inner">
@@ -402,15 +430,15 @@ select option{background:var(--violet-deep)}
             </div>
             <div style="height:1px;background:rgba(201,168,76,0.2);margin:0.8rem 2rem;width:100%"></div>
             <div>
-              <div class="about-number" style="font-size:3rem" id="txt-stat2">1000s</div>
-              <div class="about-number-label" id="txt-stat2-label">of Readings</div>
+              <div class="about-number" style="font-size:3rem" id="txt-stat2">1000+</div>
+              <div class="about-number-label" id="txt-stat2-label">Readings Given</div>
             </div>
           </div>
         </div>
         <div>
           <p class="section-label" id="txt-at-label">The Guide</p>
-          <h2 class="section-title" id="txt-at-title">Five years. Thousands of souls.</h2>
-          <p style="font-size:0.95rem;line-height:1.9;color:var(--text-muted);margin-bottom:1.5rem" id="txt-at-body">Based in Edinburgh, I've held space for thousands of individuals seeking clarity, direction, and the courage to become who they truly are — through tarot, oracle, and the transformative principles of the Law of Assumption.</p>
+          <h2 class="section-title" id="txt-at-title">Five years. Over a thousand readings.</h2>
+          <p style="font-size:0.95rem;line-height:1.9;color:var(--text-muted);margin-bottom:1.5rem" id="txt-at-body">Based in Glasgow, I've held space for over a thousand individuals seeking clarity, direction, and the courage to become who they truly are — through tarot, oracle, and the transformative principles of the Law of Assumption.</p>
           <button class="btn-outline" onclick="showPage('about')" id="txt-at-cta">Read My Story →</button>
         </div>
       </div>
@@ -426,8 +454,8 @@ select option{background:var(--violet-deep)}
       <div class="testimonials-grid reveal">
         <div class="testimonial-card">
           <div class="stars-row">★ ★ ★ ★ ★</div>
-          <p class="testimonial-text" id="txt-t1">The reading gave me chills. She described my situation with a clarity that stunned me — and the guidance she gave changed everything that followed.</p>
-          <div class="testimonial-name" id="txt-t1-name">— Edinburgh Client</div>
+          <p class="testimonial-text" id="txt-t1">She has a very calming, sweet energy about her. I would highly recommend a reading from her!</p>
+          <div class="testimonial-name" id="txt-t1-name">— Client Review</div>
         </div>
         <div class="testimonial-card">
           <div class="stars-row">★ ★ ★ ★ ★</div>
@@ -452,20 +480,17 @@ select option{background:var(--violet-deep)}
 
   <!-- FOOTER -->
   <footer>
-    <svg class="footer-logo-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="40" cy="40" r="38" stroke="rgba(192,132,252,0.4)" stroke-width="1"/>
-      <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Cinzel Decorative, serif" font-size="20" fill="url(#fg2)" letter-spacing="1">VR</text>
-      <defs><linearGradient id="fg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c8ff"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#c084fc"/></linearGradient></defs>
-    </svg>
+    <img class="footer-logo-img" src="/assets/logo.png" alt="">
     <span class="footer-brand-name" id="txt-footer-name">Violet Rising</span>
     <p class="footer-tagline" id="txt-footer-tag">Tarot · Law of Assumption · Transformation</p>
+    <p class="footer-contact"><a href="mailto:readingsbyneira@gmail.com">readingsbyneira@gmail.com</a><br>Lumiere Salon, Glasgow &middot; Online</p>
     <ul class="footer-links">
       <li><a onclick="showPage('home')">Home</a></li>
       <li><a onclick="showPage('about')">About</a></li>
       <li><a onclick="showPage('home');setTimeout(()=>document.getElementById('services-section').scrollIntoView({behavior:'smooth'}),200)">Services</a></li>
       <li><a onclick="showPage('booking')">Book Now</a></li>
     </ul>
-    <p class="footer-copy" id="txt-footer-copy">© 2025 Violet Rising · All rights reserved</p>
+    <p class="footer-copy" id="txt-footer-copy">© 2026 Violet Rising · All rights reserved</p>
     <button class="footer-admin-btn" onclick="openAdmin()">⚙ admin</button>
   </footer>
 </div>
@@ -475,16 +500,16 @@ select option{background:var(--violet-deep)}
   <div class="page-header">
     <div class="hero-bg"></div>
     <div class="stars"></div>
-    <p class="page-label" id="txt-ab-eyebrow">✦ The Guide ✦</p>
+    <p class="page-label" id="txt-ab-eyebrow">✦ Readings by Neira ✦</p>
     <h1 class="page-title" id="txt-ab-title">My Story</h1>
-    <p class="page-subtitle" id="txt-ab-subtitle">Five years. Thousands of readings. One purpose.</p>
+    <p class="page-subtitle" id="txt-ab-subtitle">Five years. Over a thousand readings. One purpose.</p>
   </div>
   <div class="divider"><span>✦</span></div>
   <section>
     <div class="si">
       <div class="story-block reveal">
         <p id="txt-ab-p1">I didn't set out to become a tarot reader. I set out to understand myself — and the cards became the mirror that helped me do it.</p>
-        <p id="txt-ab-p2">For over five years I've been giving readings in Edinburgh and online, holding space for thousands of individuals from all walks of life. Students and executives. New mothers and those starting over. People who believed, and people who arrived as sceptics and left transformed.</p>
+        <p id="txt-ab-p2">For over five years I've been giving readings in Glasgow and online, holding space for over a thousand individuals from all walks of life. Students and executives. New mothers and those starting over. People who believed, and people who arrived as sceptics and left transformed.</p>
         <p id="txt-ab-p3">What I've found, every single time, is the same truth: you already know the answer. The cards simply create the conditions for you to hear it.</p>
       </div>
       <div class="pull-quote reveal">
@@ -492,14 +517,14 @@ select option{background:var(--violet-deep)}
       </div>
       <div class="stats-row reveal">
         <div class="stat-box"><div class="stat-number" id="txt-stat-a">5+</div><div class="stat-label" id="txt-stat-a-l">Years of Practice</div></div>
-        <div class="stat-box"><div class="stat-number" id="txt-stat-b">1000s</div><div class="stat-label" id="txt-stat-b-l">Readings Given</div></div>
+        <div class="stat-box"><div class="stat-number" id="txt-stat-b">1000+</div><div class="stat-label" id="txt-stat-b-l">Readings Given</div></div>
         <div class="stat-box"><div class="stat-number" id="txt-stat-c">2</div><div class="stat-label" id="txt-stat-c-l">Core Disciplines</div></div>
         <div class="stat-box"><div class="stat-number" id="txt-stat-d">∞</div><div class="stat-label" id="txt-stat-d-l">Possibility</div></div>
       </div>
       <div class="story-block reveal">
         <p id="txt-ab-p4">My practice has two pillars. The first is tarot and oracle — ancient symbolic systems that speak the language of the unconscious. The second is the Law of Assumption: the teaching that your inner world, your assumptions about yourself and reality, creates your outer experience without exception.</p>
         <p id="txt-ab-p5">These two things work together beautifully. Tarot shows you what's happening beneath the surface. The Law of Assumption shows you how to change it.</p>
-        <p id="txt-ab-p6">I'm based in Edinburgh and work with clients globally via video call. My background is rooted in Indian spiritual tradition, and I bring that depth — alongside years of study — into every session I hold.</p>
+        <p id="txt-ab-p6">I'm based at Lumiere Salon in Glasgow and work with clients globally via video call. My background is rooted in Indian spiritual tradition, and I bring that depth — alongside years of study — into every session I hold.</p>
       </div>
     </div>
   </section>
@@ -522,8 +547,8 @@ select option{background:var(--violet-deep)}
         </div>
         <div>
           <p class="section-label" id="txt-work-label">Working Together</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--text-light);margin-bottom:1rem" id="txt-work-h3">Online &amp; Edinburgh</h3>
-          <p style="font-size:0.95rem;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem" id="txt-work-p1">Sessions are held via video call for clients worldwide, or in person in Edinburgh by arrangement. Each booking begins with a short intake so I can hold space for exactly what you need.</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--text-light);margin-bottom:1rem" id="txt-work-h3">Online &amp; Glasgow</h3>
+          <p style="font-size:0.95rem;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem" id="txt-work-p1">Sessions are held via video call for clients worldwide, or in person at Lumiere Salon, Glasgow. Group readings, parties, house calls and events are all available — just ask.</p>
           <p style="font-size:0.95rem;line-height:1.9;color:var(--text-muted);margin-bottom:2rem" id="txt-work-p2">Whether you're drawn to the cards, to coaching, or simply don't know yet — we'll find the right path together.</p>
           <button class="btn-primary" onclick="showPage('booking')">Book a Session</button>
           <button class="btn-outline" style="margin-left:1rem" onclick="showPage('booking')">View Prices →</button>
@@ -537,20 +562,17 @@ select option{background:var(--violet-deep)}
     <button class="btn-primary" onclick="showPage('booking')">Book Your Session</button>
   </div>
   <footer>
-    <svg class="footer-logo-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="40" cy="40" r="38" stroke="rgba(192,132,252,0.4)" stroke-width="1"/>
-      <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Cinzel Decorative, serif" font-size="20" fill="url(#fg3)" letter-spacing="1">VR</text>
-      <defs><linearGradient id="fg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c8ff"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#c084fc"/></linearGradient></defs>
-    </svg>
+    <img class="footer-logo-img" src="/assets/logo.png" alt="">
     <span class="footer-brand-name">Violet Rising</span>
     <p class="footer-tagline">Tarot · Law of Assumption · Transformation</p>
+    <p class="footer-contact"><a href="mailto:readingsbyneira@gmail.com">readingsbyneira@gmail.com</a><br>Lumiere Salon, Glasgow &middot; Online</p>
     <ul class="footer-links">
       <li><a onclick="showPage('home')">Home</a></li>
       <li><a onclick="showPage('about')">About</a></li>
       <li><a onclick="showPage('home');setTimeout(()=>document.getElementById('services-section').scrollIntoView({behavior:'smooth'}),200)">Services</a></li>
       <li><a onclick="showPage('booking')">Book Now</a></li>
     </ul>
-    <p class="footer-copy">© 2025 Violet Rising · All rights reserved</p>
+    <p class="footer-copy">© 2026 Violet Rising · All rights reserved</p>
     <button class="footer-admin-btn" onclick="openAdmin()">⚙ admin</button>
   </footer>
 </div>
@@ -582,8 +604,8 @@ select option{background:var(--violet-deep)}
       <p class="step-subtitle">Select the service you'd like to book. Tap a card to select it.</p>
       <div class="svc-category">Tarot &amp; Oracle Readings</div>
       <div class="service-grid">
-        <div class="svc-card" onclick="selectService(this,'10-Min Quick Clarity Reading','£25',10,25)">
-          <div class="svc-tag">10 Minutes</div>
+        <div class="svc-card" onclick="selectService(this,'15-Min Quick Clarity Reading','£25',15,25)">
+          <div class="svc-tag">15 Minutes</div>
           <div class="svc-name">Quick Clarity Reading</div>
           <div class="svc-price">£25</div>
         </div>
@@ -592,10 +614,10 @@ select option{background:var(--violet-deep)}
           <div class="svc-name">Deep Dive Reading</div>
           <div class="svc-price">£60</div>
         </div>
-        <div class="svc-card" onclick="selectService(this,'60-Min Full Immersion Reading','£90',60,90)">
+        <div class="svc-card" onclick="selectService(this,'60-Min Full Immersion Reading','£80',60,80)">
           <div class="svc-tag">60 Minutes</div>
           <div class="svc-name">Full Immersion Reading</div>
-          <div class="svc-price">£90</div>
+          <div class="svc-price">£80</div>
         </div>
       </div>
       <div class="svc-category">Think to Transform — Law of Assumption</div>
@@ -658,7 +680,7 @@ select option{background:var(--violet-deep)}
     <!-- STEP 3: TIME -->
     <div class="step-panel" id="step3">
       <h2 class="step-title">Choose a time</h2>
-      <p class="step-subtitle">All times shown in UK time (GMT/BST). Sessions are held via video call.</p>
+      <p class="step-subtitle">All times shown in UK time (GMT/BST). Sessions are held online via video call, or in person at Lumiere Salon, Glasgow.</p>
       <div class="time-slots" id="timeSlots"></div>
       <div class="booking-nav">
         <button class="btn-back" onclick="prevStep(3)">← Back</button>
@@ -680,7 +702,7 @@ select option{background:var(--violet-deep)}
         <textarea id="inp-intention" placeholder="What's on your mind? What are you hoping to gain from this session?"></textarea>
       </div>
       <div class="form-group"><label>How did you find me?</label>
-        <select id="inp-source"><option value="">Select…</option><option>Instagram</option><option>TikTok</option><option>Word of mouth</option><option>Google</option><option>Returning client</option><option>Other</option></select>
+        <select id="inp-source"><option value="">Select…</option><option>Instagram</option><option>TikTok</option><option>Word of mouth</option><option>Flyer</option><option>Google</option><option>Returning client</option><option>Other</option></select>
       </div>
       <div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" id="inp-website" tabindex="-1" autocomplete="off"></div>
       <div class="booking-nav">
@@ -704,20 +726,17 @@ select option{background:var(--violet-deep)}
   </div>
 
   <footer>
-    <svg class="footer-logo-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="40" cy="40" r="38" stroke="rgba(192,132,252,0.4)" stroke-width="1"/>
-      <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Cinzel Decorative, serif" font-size="20" fill="url(#fg4)" letter-spacing="1">VR</text>
-      <defs><linearGradient id="fg4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c8ff"/><stop offset="50%" stop-color="#a855f7"/><stop offset="100%" stop-color="#c084fc"/></linearGradient></defs>
-    </svg>
+    <img class="footer-logo-img" src="/assets/logo.png" alt="">
     <span class="footer-brand-name">Violet Rising</span>
     <p class="footer-tagline">Tarot · Law of Assumption · Transformation</p>
+    <p class="footer-contact"><a href="mailto:readingsbyneira@gmail.com">readingsbyneira@gmail.com</a><br>Lumiere Salon, Glasgow &middot; Online</p>
     <ul class="footer-links">
       <li><a onclick="showPage('home')">Home</a></li>
       <li><a onclick="showPage('about')">About</a></li>
       <li><a onclick="showPage('home');setTimeout(()=>document.getElementById('services-section').scrollIntoView({behavior:'smooth'}),200)">Services</a></li>
       <li><a onclick="showPage('booking')">Book Now</a></li>
     </ul>
-    <p class="footer-copy">© 2025 Violet Rising · All rights reserved</p>
+    <p class="footer-copy">© 2026 Violet Rising · All rights reserved</p>
     <button class="footer-admin-btn" onclick="openAdmin()">⚙ admin</button>
   </footer>
 </div>
@@ -727,10 +746,7 @@ select option{background:var(--violet-deep)}
   <!-- LOGIN -->
   <div id="adminLogin" class="admin-panel">
     <div class="admin-login-wrap">
-      <svg viewBox="0 0 80 80" fill="none" style="width:60px;height:60px">
-        <circle cx="40" cy="40" r="38" stroke="rgba(201,168,76,0.4)" stroke-width="1.5"/>
-        <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Cinzel Decorative, serif" font-size="20" fill="#c9a84c" letter-spacing="1">VR</text>
-      </svg>
+      <img src="/assets/logo.png" alt="" style="height:72px;width:auto;display:block;margin:0 auto">
       <h2 style="font-family:'Cinzel',serif;font-size:1.3rem;color:var(--gold);letter-spacing:0.1em">Admin Portal</h2>
       <p style="font-size:0.85rem;color:var(--text-muted);letter-spacing:0.05em">Enter your password to edit site content</p>
       <div class="admin-pw-wrap">
@@ -832,6 +848,22 @@ select option{background:var(--violet-deep)}
     </div>
     <div class="admin-field"><label class="admin-label">Masterclass — Description</label><input class="admin-input" data-id="txt-c6-desc" id="ae-c6-desc"></div>
 
+    <p class="admin-section">🏠 Home — This Month's Offer</p>
+    <div class="admin-grid2">
+      <div class="admin-field"><label class="admin-label">Offer Badge (e.g. October Deal)</label><input class="admin-input" data-id="txt-offer-badge" id="ae-offer-badge"></div>
+      <div class="admin-field"><label class="admin-label">Offer Headline</label><input class="admin-input" data-id="txt-offer-title" id="ae-offer-title"></div>
+    </div>
+    <div class="admin-field"><label class="admin-label">Offer Details</label><textarea class="admin-textarea" data-id="txt-offer-body" id="ae-offer-body"></textarea></div>
+    <div class="admin-field"><label class="admin-label">Group Offers Label</label><input class="admin-input" data-id="txt-offer-group-label" id="ae-offer-group-label"></div>
+    <div class="admin-grid2">
+      <div class="admin-field"><label class="admin-label">Group Offer 1</label><input class="admin-input" data-id="txt-offer-g1" id="ae-offer-g1"></div>
+      <div class="admin-field"><label class="admin-label">Group Offer 2</label><input class="admin-input" data-id="txt-offer-g2" id="ae-offer-g2"></div>
+    </div>
+    <div class="admin-grid2">
+      <div class="admin-field"><label class="admin-label">Group Offer 3</label><input class="admin-input" data-id="txt-offer-g3" id="ae-offer-g3"></div>
+      <div class="admin-field"><label class="admin-label">Group Offer 4</label><input class="admin-input" data-id="txt-offer-g4" id="ae-offer-g4"></div>
+    </div>
+
     <p class="admin-section">🏠 Home — About Teaser</p>
     <div class="admin-grid2">
       <div class="admin-field"><label class="admin-label">Stat 1 Number</label><input class="admin-input" data-id="txt-stat1" id="ae-stat1"></div>
@@ -920,16 +952,16 @@ select option{background:var(--violet-deep)}
 <script>
 // ── DEFAULTS ────────────────────────────────────────────────────────────────
 const D = {
-  'site-title':'Violet Rising | Tarot · Manifestation · Transformation',
+  'site-title':'Violet Rising | Tarot Readings & Manifestation Coaching · Glasgow & Online',
   'txt-hero-name':'Violet Rising',
   'txt-hero-subtitle':'Tarot Readings ~ Manifestation Coaching',
-  'txt-hero-desc':'Thousands of readings. Five years of practice. One invitation — to rise into the life you were always meant to live.',
+  'txt-hero-desc':'Tarot readings by Neira. Over a thousand readings, five years of practice, one invitation — to rise into the life you were always meant to live.',
   'txt-hero-cta1':'Book a Reading',
   'txt-hero-cta2':'Meet Your Guide',
   'txt-s-label':'Tarot & Oracle',
   'txt-s-title':'Card Readings',
   'txt-s-intro':'Every reading is a conversation between you, the cards, and the deeper intelligence that already knows the way.',
-  'txt-c1-dur':'10 Minutes',
+  'txt-c1-dur':'15 Minutes',
   'txt-c1-name':'Quick Clarity Reading',
   'txt-c1-price':'£25',
   'txt-c1-desc':'A focused one-question reading for swift insight when you need a clear signal, fast.',
@@ -939,7 +971,7 @@ const D = {
   'txt-c2-desc':'Space to explore a situation with nuance, depth, and real guidance you can act on.',
   'txt-c3-dur':'60 Minutes',
   'txt-c3-name':'Full Immersion Reading',
-  'txt-c3-price':'£90',
+  'txt-c3-price':'£80',
   'txt-c3-desc':'A comprehensive session covering multiple areas of your life — clarity and transformation in one sitting.',
   'txt-loa-cat':'Think to Transform — Law of Assumption',
   'txt-c4-dur':'Weekly · 3 Months',
@@ -959,15 +991,20 @@ const D = {
   'txt-c6-price':'£199',
   'txt-c6-badge':'One-Time Investment',
   'txt-c6-desc':'Self-Concept or Money Masterclass. Deep, focused, and complete in a single session.',
+  'txt-offer-badge':'September Deal',
+  'txt-offer-title':'Bring a friend for 20% off',
+  'txt-offer-body':'Applicable on all readings — bring your loved ones and you all save 20% with any booking. Free 10-minute tasters are also available for manifestation classes.',
+  'txt-offer-group-label':'Exciting group offers',
+  'txt-offer-g1':'Group readings','txt-offer-g2':'Parties','txt-offer-g3':'House calls','txt-offer-g4':'Events',
   'txt-stat1':'5+','txt-stat1-label':'Years of Practice',
-  'txt-stat2':'1000s','txt-stat2-label':'of Readings',
+  'txt-stat2':'1000+','txt-stat2-label':'Readings Given',
   'txt-at-label':'The Guide',
-  'txt-at-title':'Five years. Thousands of souls.',
-  'txt-at-body':'Based in Edinburgh, I\'ve held space for thousands of individuals seeking clarity, direction, and the courage to become who they truly are — through tarot, oracle, and the transformative principles of the Law of Assumption.',
+  'txt-at-title':'Five years. Over a thousand readings.',
+  'txt-at-body':'Based in Glasgow, I\'ve held space for over a thousand individuals seeking clarity, direction, and the courage to become who they truly are — through tarot, oracle, and the transformative principles of the Law of Assumption.',
   'txt-at-cta':'Read My Story →',
   'txt-test-title':'What the community says',
-  'txt-t1':'The reading gave me chills. She described my situation with a clarity that stunned me — and the guidance she gave changed everything that followed.',
-  'txt-t1-name':'— Edinburgh Client',
+  'txt-t1':'She has a very calming, sweet energy about her. I would highly recommend a reading from her!',
+  'txt-t1-name':'— Client Review',
   'txt-t2':'The Law of Assumption course rewired something fundamental in me. Shifts in my relationships, career, and how I feel about myself — every single day.',
   'txt-t2-name':'— Online Course Student',
   'txt-t3':'I was sceptical. What I got was the most honest, insightful conversation I\'ve had in years. I\'ve already booked again.',
@@ -975,20 +1012,20 @@ const D = {
   'txt-cta-title':'Ready to rise?',
   'txt-cta-body':'Your next chapter is waiting. Take the first step and book your session today.',
   'txt-cta-btn':'Book Your Session',
-  'txt-ab-eyebrow':'✦ The Guide ✦',
+  'txt-ab-eyebrow':'✦ Readings by Neira ✦',
   'txt-ab-title':'My Story',
-  'txt-ab-subtitle':'Five years. Thousands of readings. One purpose.',
+  'txt-ab-subtitle':'Five years. Over a thousand readings. One purpose.',
   'txt-ab-p1':'I didn\'t set out to become a tarot reader. I set out to understand myself — and the cards became the mirror that helped me do it.',
-  'txt-ab-p2':'For over five years I\'ve been giving readings in Edinburgh and online, holding space for thousands of individuals from all walks of life. Students and executives. New mothers and those starting over. People who believed, and people who arrived as sceptics and left transformed.',
+  'txt-ab-p2':'For over five years I\'ve been giving readings in Glasgow and online, holding space for over a thousand individuals from all walks of life. Students and executives. New mothers and those starting over. People who believed, and people who arrived as sceptics and left transformed.',
   'txt-ab-p3':'What I\'ve found, every single time, is the same truth: you already know the answer. The cards simply create the conditions for you to hear it.',
   'txt-ab-quote':'"The cards don\'t predict your future. They reveal what\'s already alive within you — and invite you to choose."',
   'txt-stat-a':'5+','txt-stat-a-l':'Years of Practice',
-  'txt-stat-b':'1000s','txt-stat-b-l':'Readings Given',
+  'txt-stat-b':'1000+','txt-stat-b-l':'Readings Given',
   'txt-stat-c':'2','txt-stat-c-l':'Core Disciplines',
   'txt-stat-d':'∞','txt-stat-d-l':'Possibility',
   'txt-ab-p4':'My practice has two pillars. The first is tarot and oracle — ancient symbolic systems that speak the language of the unconscious. The second is the Law of Assumption: the teaching that your inner world, your assumptions about yourself and reality, creates your outer experience without exception.',
   'txt-ab-p5':'These two things work together beautifully. Tarot shows you what\'s happening beneath the surface. The Law of Assumption shows you how to change it.',
-  'txt-ab-p6':'I\'m based in Edinburgh and work with clients globally via video call. My background is rooted in Indian spiritual tradition, and I bring that depth — alongside years of study — into every session I hold.',
+  'txt-ab-p6':'I\'m based at Lumiere Salon in Glasgow and work with clients globally via video call. My background is rooted in Indian spiritual tradition, and I bring that depth — alongside years of study — into every session I hold.',
   'txt-phil-label':'What I Offer',
   'txt-phil-title':'Two paths. One destination.',
   'txt-phil-h3':'What I believe about this work',
@@ -998,8 +1035,8 @@ const D = {
   'txt-prin4':'Tarot is a tool, not a prophecy. The future is not fixed. You are always in the driver\'s seat.',
   'txt-prin5':'Transformation is available to everyone — regardless of background, belief, or how long you\'ve been stuck.',
   'txt-work-label':'Working Together',
-  'txt-work-h3':'Online & Edinburgh',
-  'txt-work-p1':'Sessions are held via video call for clients worldwide, or in person in Edinburgh by arrangement. Each booking begins with a short intake so I can hold space for exactly what you need.',
+  'txt-work-h3':'Online & Glasgow',
+  'txt-work-p1':'Sessions are held via video call for clients worldwide, or in person at Lumiere Salon, Glasgow. Group readings, parties, house calls and events are all available — just ask.',
   'txt-work-p2':'Whether you\'re drawn to the cards, to coaching, or simply don\'t know yet — we\'ll find the right path together.',
   'txt-ab-cta-title':'✦ Begin Here ✦',
   'txt-ab-cta-body':'Whether you want a single reading or a full 3-month transformation — start with a booking and we\'ll go from there.',
@@ -1008,7 +1045,7 @@ const D = {
   'txt-confirm-msg':'Thank you for booking with Violet Rising. A confirmation email is on its way to you. I look forward to sitting with you in this sacred space.',
   'txt-footer-name':'Violet Rising',
   'txt-footer-tag':'Tarot · Law of Assumption · Transformation',
-  'txt-footer-copy':'© 2025 Violet Rising · All rights reserved'
+  'txt-footer-copy':'© 2026 Violet Rising · All rights reserved'
 };
 
 const SK = 'vr_content_v2';
@@ -1020,7 +1057,7 @@ function getPw(){ return localStorage.getItem(PK)||'violet2025'; }
 function applyContent(c){
   Object.entries(c).forEach(([id,val])=>{
     if(id==='site-title'){document.title=val;return;}
-    document.querySelectorAll('[id="'+id+'"]').forEach(el=>{ el.textContent=val; });
+    document.querySelectorAll('[id="'+id+'"]').forEach(el=>{ if(el.textContent.trim()!==String(val).trim()) el.textContent=val; });
   });
 }
 
